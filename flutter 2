@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+ 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true),
+      home: Simpleproject (),
+    );
+  }
+}
+
+class Simpleproject extends StatelessWidget {
+  const Simpleproject({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 10,
+        title: Text("MUBARAK"),
+        centerTitle: true,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu, size: 25)),
+
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.message, size: 25)),
+
+          IconButton(onPressed: () {}, icon: Icon(Icons.search, size: 25)),
+        ],
+      ),
+
+      body: Center(
+        child: Text(
+          "Hello, Mubarak 👋", 
+        style: TextStyle(
+          fontSize: 25),
+        ),
+      ),
+    );
+
+  }
+}
