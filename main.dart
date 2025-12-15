@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+ 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true),
+      home: Simpleproject (),
+    );
+  }
+}
+ 
+class Simpleproject extends StatelessWidget {
+  const Simpleproject({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+        elevation: 10,
+         title: Text("facebook"), 
+        centerTitle: true,
+        leading: IconButton(onPressed: (){}, icon:Icon(Icons.menu, size: 30)),
+        ),
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {},
+      child: Icon(Icons.add),
+      ),
+    body: Text(
+      "Here are some resources rand tips that  الرئيسية  can help you ",
+      style: TextStyle(
+        fontSize: 33.0,
+      //backgroundColor: Colors.blue,
+      color: Colors.blue,
+      decoration: TextDecoration.lineThrough,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.bold,
+      height: 2.1,
+      letterSpacing: 2.2,
+      wordSpacing: 6,
+      ),
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
+      //textAlign: TextAlign.left,
+      //textDirection: TextDirection.rtl,
+      
+
+     )
+     );
+   }
+  }    
