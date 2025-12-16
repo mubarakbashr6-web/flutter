@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true),
+      home: Simpleproject(),
+    );
+  }
+}
+
+class Simpleproject extends StatelessWidget {
+  const Simpleproject({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 10,
+        title: Text("MUBARAK"),
+        centerTitle: true,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu, size: 25)),
+
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.message, size: 25)),
+
+          IconButton(onPressed: () {}, icon: Icon(Icons.search, size: 25)),
+        ],
+      ),
+
+      body: Container(
+        child: Text(
+          "Hello, I'm Mubarak",
+           style: TextStyle(
+            fontSize: 25,
+            color: Colors.blue,
+            fontWeight: FontWeight.bold,
+            
+            )),
+        //color: Colors.amber,
+        margin: EdgeInsets.all(55),
+        //padding: EdgeInsets.all(55),
+        height: 400,
+        width: 300,
+        alignment: Alignment.center,
+        transform: Matrix4.rotationZ(44.1),
+        decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+          //shape: BoxShape.circle,
+          color: Colors.yellow,
+          border: Border.all(
+            color: Colors.black, 
+            width: 7,
+             
+            )
+        ),
+      ),
+    
+    );
+  }
+}
